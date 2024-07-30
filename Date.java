@@ -7,14 +7,25 @@ class Date
         int dd=Integer.parseInt(args[0]);
         int mm=Integer.parseInt(args[1]);
         int year=Integer.parseInt(args[2]);
+        
         int odd=0;
+        
         int dayInMonth[]={0,31,28,31,30,31,30,31,31,30,31,30,31};
 
-        int base=0;
-        if (year>=1600 && year<=2000)
-        {base=1600;}
-        else if (year>=2000 && year<=2400)
-        {base=2000;}
+        if(mm<1 || mm>12)
+        {
+            System.out.println(" INVALID MONTH ");
+        }
+        else if(dd<1 || dayInMonth[mm]<dd)
+        {
+            System.out.println(" INVALID DATE ");
+        }
+        else if(year<1)
+        {
+            System.out.println(" INVALID YEAR ");
+        }
+        else {
+        int base=(year/400)*400;
 
         int yd=year-base-1;
         int yd1=yd/100;
@@ -47,12 +58,11 @@ class Date
         }
         odd+=dd;
         odd=odd%7;
-        System.out.println("-----------------");
+        System.out.println("\n-----------------");
         String da[]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
-        System.out.println("Day : "+da[odd]);
+        System.out.println("Day on this date : "+da[odd]);
         System.out.println("-----------------");
-
+        }
 
     }
 }
-
