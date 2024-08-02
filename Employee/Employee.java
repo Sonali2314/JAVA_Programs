@@ -1,7 +1,5 @@
 class Employee
 {
-    public static void main(String args[]) 
-    {
     String F_name;
     String L_name;
     double M_salary;
@@ -49,4 +47,4 @@ class Employee
         M_salary=M_salary+(M_salary*0.1);
     }
 }
-}
+
