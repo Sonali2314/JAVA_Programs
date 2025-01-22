@@ -13,26 +13,13 @@ public class test2D
         System.out.println();
         System.out.println("Output 1");
 
-
-        int curr=0;
-        while(curr<5)
-        {
-        int c1=arr[1].length-1;
         for(int i=0;i<arr.length;i++)
         {
             for(int j =0;j<arr[i].length;j++)
             {
-                if(c1>=0)
-                {
-                    System.out.print(arr[i][curr]+" , ");
-                    c1=c1-1;
-                    break;
-                }
+                System.out.print(arr[j][i]+" , ");
             }
         }
-        curr+=1;
-    }
-
         System.out.println();
         System.out.println("Output 2");
 
