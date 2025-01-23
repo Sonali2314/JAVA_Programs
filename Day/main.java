@@ -52,7 +52,7 @@ public class main{
     public static void main(String[]args)
     {
         Scanner s = new Scanner(System.in);
-        System.out.println("Menu /n1 : factorial/n2 : Prime/n3 : Posive or Negative /n4 : Exit/n");
+        System.out.println("Menu \n1 : factorial\n2 : Prime\n3 : Posive or Negative \n4 : Exit\n");
         System.out.print("Enter the choice : ");
         int choice=s.nextInt();
         while(choice !=4){
